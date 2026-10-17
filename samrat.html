@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samrat Transport Company - Reliable All-India Goods & Freight Transport Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #0F2537;
+      --primary-light: #1E3A5F;
+      --secondary: #D4AF37;
+      --secondary-hover: #B59226;
+      --accent: #E6B800;
+      --dark: #0A1826;
+      --gray-bg: #F4F6F9;
+      --card-bg: #FFFFFF;
+      --text: #2B3647;
+      --text-muted: #62728D;
+      --white: #FFFFFF;
+      --radius: 16px;
+      --radius-sm: 8px;
+      --shadow: 0 20px 40px rgba(15, 37, 55, 0.08);
+      --shadow-lg: 0 25px 50px -12px rgba(15, 37, 55, 0.25);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* TOP BAR */
+    .top-bar {
+      background-color: var(--dark);
+      color: #94A3B8;
+      font-size: 0.85rem;
+      padding: 8px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .top-info {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .top-info span, .top-info a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .top-info a:hover {
+      color: var(--secondary);
+    }
+
+    /* HEADER / NAVBAR */
+    .header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 6px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* LOGO DISPLAY FIXES */
+    .logo-box {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-img-brand {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      filter: contrast(120%) brightness(100%);
+    }
+
+    .footer-logo-wrap {
+      background: #FFFFFF;
+      padding: 6px 14px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .logo-img-footer {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--secondary-hover);
+    }
+
+    .nav-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .phone-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary);
+      padding: 8px 16px;
+      background: rgba(15, 37, 55, 0.05);
+      border-radius: 50px;
+    }
+
+    .btn-quote {
+      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      color: var(--dark);
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-quote:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(212, 175, 55, 0.45);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, rgba(15, 37, 55, 0.92), rgba(10, 24, 38, 0.88)),
+                  url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      padding: 70px 24px 100px;
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .hero-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--secondary);
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero-title span {
+      color: var(--secondary);
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #CBD5E1;
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+
+    .hero-features {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .hero-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-action-buttons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .btn-secondary-outline {
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: var(--white);
+      padding: 12px 26px;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-secondary-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--white);
+    }
+
+    /* 3 TRUCKS BACKGROUND GRAPHIC */
+    .fleet-graphic-bg {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 180px;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      padding: 0 5%;
+    }
+
+    .truck-svg {
+      fill: #FFFFFF;
+    }
+
+    /* CALLBACK FORM CARD */
+    .callback-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow-lg);
+      color: var(--text);
+      position: relative;
+    }
+
+    .callback-card h3 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .callback-card p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--primary);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid #E2E8F0;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      transition: var(--transition);
+      outline: none;
+      background: #F8FAFC;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(15, 37, 55, 0.1);
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--primary);
+      color: var(--white);
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 10px 20px rgba(15, 37, 55, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-submit:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    /* DAILY ROUTES HIGHLIGHT SECTION */
+    .routes-section {
+      padding: 70px 24px;
+      background: linear-gradient(180deg, #F8FAFC 0%, #EDF2F7 100%);
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .section-container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--secondary-hover);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .route-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .route-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid #E2E8F0;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .route-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--secondary);
+      box-shadow: 0 20px 30px rgba(15, 37, 55, 0.12);
+    }
+
+    .route-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(212, 175, 55, 0.15);
+      color: #907000;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+
+    .route-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .route-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .route-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary);
+      border-top: 1px dashed #E2E8F0;
+      padding-top: 12px;
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      padding: 90px 24px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      object-fit: cover;
+      height: 420px;
+    }
+
+    .experience-badge {
+      position: absolute;
+      bottom: -25px;
+      left: 30px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 20px 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-left: 6px solid var(--secondary);
+    }
+
+    .exp-num {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--secondary);
+    }
+
+    .exp-text {
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .about-content h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .mission-vision {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .mv-box {
+      background: var(--gray-bg);
+      padding: 20px;
+      border-radius: var(--radius-sm);
+    }
+
+    .mv-box h4 {
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* SERVICES SECTION */
+    .services-section {
+      background: var(--gray-bg);
+      padding: 90px 24px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid transparent;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--secondary);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(15, 37, 55, 0.06);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* WHY CHOOSE US */
+    .why-section {
+      padding: 90px 24px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 18px;
+    }
+
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .why-item h4 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .why-item p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: #94A3B8;
+      padding: 70px 24px 30px;
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1.2fr;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand p {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .footer-title {
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary);
+    }
+
+    .contact-list {
+      list-style: none;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+    }
+
+    .map-btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--secondary);
+      color: var(--dark);
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-top: 8px;
+      transition: var(--transition);
+    }
+
+    .map-btn-link:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 25px;
+      font-size: 0.85rem;
+    }
+
+    /* FLOATING WHATSAPP & PHONE BUTTONS */
+    .floating-actions {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .float-btn {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+    }
+
+    .float-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .float-whatsapp {
+      background-color: #25D366;
+    }
+
+    .float-call {
+      background-color: var(--primary);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+      .hero-container, .about-grid, .footer-container {
+        grid-template-columns: 1fr;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .hero-title {
+        font-size: 2.4rem;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP INFORMATION BAR -->
+  <div class="top-bar">
+    <div class="top-info">
+      <span>📍 Front of Honda Showroom, GT Road, Khurja, Bulandshahr - Pin 203131</span>
+      <a href="https://maps.app.goo.gl/5DTpDyE4v2nuBpdy6" target="_blank" style="color: var(--secondary);">
+        🗺️ Direct Map Location
+      </a>
+    </div>
+    <div class="top-info">
+      <a href="tel:9058584283">📞 +91 90585 84283</a>
+      <a href="tel:9897222683">📞 +91 98972 22683</a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="logo-box">
+        <img src="SamratLogo.jpeg" alt="Samrat Transport Company Logo" class="logo-img-brand">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#routes">Daily Routes</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta-group">
+        <a href="tel:9058584283" class="phone-pill">
+          📞 9058584283
+        </a>
+        <a href="#quote" class="btn-quote">Get Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          🛡️ India's #1 Trusted Commercial Goods Transport
+        </div>
+        <h1 class="hero-title">
+          SAMRAT TRANSPORT COMPANY KHURJA <span>EVERY GOODS MOVE</span>
+        </h1>
+        <p class="hero-subtitle">
+          30+ Years of excellence in safe, efficient, and heavy commercial freight transport solutions across all major routes in India.
+        </p>
+
+        <div class="hero-features">
+          <div class="hero-feature-item">
+            🚚 Safe Goods Transit
+          </div>
+          <div class="hero-feature-item">
+            ⏱️ On-time Freight Delivery
+          </div>
+        </div>
+
+        <div class="hero-action-buttons">
+          <a href="#quote" class="btn-quote">Get Your Free Quote</a>
+          <a href="tel:9058584283" class="btn-secondary-outline">📞 Call Us Now</a>
+        </div>
+      </div>
+
+      <!-- CALLBACK FORM CARD -->
+      <div class="callback-card" id="quote">
+        <h3>Request a Callback</h3>
+        <p>Fill out the form below to get an instant price estimate for your commercial cargo.</p>
+        
+        <form id="callbackForm" onsubmit="sendToWhatsApp(event)">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="clientName" class="form-control" placeholder="John Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="clientPhone" class="form-control" placeholder="+91 00000 00000" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>From (Pickup Location)</label>
+              <input type="text" id="fromLocation" class="form-control" placeholder="e.g. Khurja" required>
+            </div>
+            <div class="form-group">
+              <label>To (Destination)</label>
+              <input type="text" id="toLocation" class="form-control" placeholder="e.g. Lucknow" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Goods Category / Transport Type</label>
+            <select id="goodsType" class="form-control" required>
+              <option value="">Select Goods Type</option>
+              <option value="Full Truck Load (FTL)">Full Truck Load (FTL)</option>
+              <option value="Part Truck Load (PTL)">Part Truck Load (PTL)</option>
+              <option value="Commercial Cargo & Goods">Commercial Cargo & Goods</option>
+              <option value="Industrial Machinery & Materials">Industrial Machinery & Materials</option>
+              <option value="Express Goods Transport">Express Goods Transport</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <span>Get Price Estimate</span>
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+            </svg>
+          </button>
+          <p style="font-size: 0.72rem; text-align: center; margin-top: 10px; margin-bottom: 0; color: var(--text-muted);">
+            Submitting redirects your query directly to our WhatsApp support (+91 9058584283).
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- 3 TRUCKS BACKGROUND GRAPHIC -->
+    <div class="fleet-graphic-bg">
+      <svg class="truck-svg" width="220" height="110" viewBox="0 0 24 24">
+        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+      </svg>
+      <svg class="truck-svg" width="160" height="85" viewBox="0 0 24 24">
+        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+      </svg>
+      <svg class="truck-svg" width="110" height="60" viewBox="0 0 24 24">
+        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- DAILY DIRECT SERVICE ROUTES -->
+  <section class="routes-section" id="routes">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-subtitle">Regular Cargo Routes</div>
+        <h2 class="section-title">Daily Direct Service Routes</h2>
+        <p style="color: var(--text-muted); margin-top: 10px;">
+          We operate daily dedicated commercial trucks on major corridors with fixed departure schedules and guaranteed delivery timelines.
+        </p>
+      </div>
+
+      <div class="route-cards-grid">
+        <div class="route-card">
+          <div class="route-badge">DAILY SERVICE</div>
+          <div class="route-title">📍 Khurja ⇆ Delhi / NCR</div>
+          <p class="route-desc">Daily scheduled dispatch for ceramics, industrial goods, and commercial freight to Delhi, Noida, and Gurugram.</p>
+          <div class="route-footer">
+            <span>Frequency: Daily</span>
+            <span>Type: FTL / PTL</span>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div class="route-badge">DAILY SERVICE</div>
+          <div class="route-title">📍 Khurja ⇆ Lucknow</div>
+          <p class="route-desc">Direct fast-track commercial goods transportation connecting Khurja hub directly to Lucknow and Awadh region.</p>
+          <div class="route-footer">
+            <span>Frequency: Daily</span>
+            <span>Type: Express Goods</span>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div class="route-badge">DAILY SERVICE</div>
+          <div class="route-title">📍 Khurja ⇆ Prayagraj</div>
+          <p class="route-desc">Reliable heavy cargo and goods transit line connecting Khurja to Prayagraj and adjoining industrial sectors.</p>
+          <div class="route-footer">
+            <span>Frequency: Daily</span>
+            <span>Type: Heavy & Commercial</span>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div class="route-badge">DAILY SERVICE</div>
+          <div class="route-title">📍 Khurja ⇆ Gorakhpur</div>
+          <p class="route-desc">Dedicated daily freight service covering eastern UP routes from Khurja directly to Gorakhpur markets.</p>
+          <div class="route-footer">
+            <span>Frequency: Daily</span>
+            <span>Type: Full Fleet Dispatch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80" alt="Samrat Transport Fleet" class="about-img">
+          
+          <div class="experience-badge">
+            <div class="exp-num">30+</div>
+            <div class="exp-text">Years of<br>Excellence</div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-subtitle">WHO WE ARE</div>
+          <h2>About Samrat Transport Company</h2>
+          <p>
+            At Samrat Transport Company, we understand that seamless logistics is the backbone of every growing business. Built on 30 years of trust, reliability, and technical expertise, we offer top-tier commercial goods transport solutions across India.
+          </p>
+          <p>
+            Operating directly from GT Road, Khurja, our mission is to ensure safe, damage-free, and punctual delivery of your commercial freight with our modern fleet of heavy and light trucks.
+          </p>
+
+          <div class="mission-vision">
+            <div class="mv-box">
+              <h4>🎯 Our Mission</h4>
+              <p style="font-size: 0.85rem; margin: 0;">Provide seamless, customer-centric, and secure goods transportation across all Indian states.</p>
+            </div>
+            <div class="mv-box">
+              <h4>👁️ Our Vision</h4>
+              <p style="font-size: 0.85rem; margin: 0;">To be recognized as India's most dependable and technologically forward transport enterprise.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services-section" id="services">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-subtitle">OUR EXPERTISE</div>
+        <h2 class="section-title">Comprehensive Freight Services</h2>
+        <p style="color: var(--text-muted); margin-top: 10px;">Tailored logistics solutions engineered for every scale of commercial goods transportation.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🚛</div>
+          <h3>Full Truck Load (FTL)</h3>
+          <p>Dedicated full-capacity trucks for large volume cargo, offering direct non-stop transit to any city in India.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Part Truck Load (PTL)</h3>
+          <p>Cost-effective shared payload solutions for smaller commercial shipments with guaranteed safety and care.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3>Heavy Goods Transport</h3>
+          <p>Specialized heavy machinery and industrial cargo transport utilizing multi-axle trailers and container trucks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-section" id="why-us">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-subtitle">THE SAMRAT EDGE</div>
+        <h2 class="section-title">Why Thousands Trust Samrat Transport</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">👨‍✈️</div>
+          <div>
+            <h4>Professional Drivers & Staff</h4>
+            <p>Our drivers are experienced experts in navigating national highways safely and efficiently.</p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-icon">🛡️</div>
+          <div>
+            <h4>Safe & Timely Relocation</h4>
+            <p>Strict schedules and robust cargo securing to ensure on-time delivery without damage.</p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-icon">🗺️</div>
+          <div>
+            <h4>All-India Network</h4>
+            <p>End-to-end transport coverage connecting Khurja and Bulandshahr to all major hubs across India.</p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <div class="why-icon">🏷️</div>
+          <div>
+            <h4>Transparent & Affordable Pricing</h4>
+            <p>Competitive rates with zero hidden charges. Clear, upfront quotes for all freight categories.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="SamratLogo.jpeg" alt="Samrat Transport Company Logo" class="logo-img-footer">
+        </div>
+        <p>
+          Leading commercial goods and freight transportation company with 30 years of experience serving clients across all Indian routes.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#routes">Daily Routes</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Get In Touch</h4>
+        <ul class="contact-list">
+          <li>
+            <span>📍</span>
+            <div>
+              Front of Honda Showroom, GT Road, Khurja, Bulandshahr - Pin 203131, Uttar Pradesh
+              <br>
+              <a href="https://maps.app.goo.gl/5DTpDyE4v2nuBpdy6" target="_blank" class="map-btn-link">
+                🗺️ Open in Google Maps
+              </a>
+            </div>
+          </li>
+          <li>
+            <span>📞</span>
+            <div>
+              +91 90585 84283<br>
+              +91 98972 22683
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 Samrat Transport Company. All Rights Reserved. Built for Seamless Commercial Freight Logistics.
+    </div>
+  </footer>
+
+  <!-- FLOATING CALL & WHATSAPP BUTTONS -->
+  <div class="floating-actions">
+    <a href="https://wa.me/919058584283?text=Hello%20Samrat%20Transport,%20I%20want%20a%20quote%20for%20goods%20transport." target="_blank" class="float-btn float-whatsapp" title="Chat on WhatsApp">
+      <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+      </svg>
+    </a>
+    <a href="tel:9058584283" class="float-btn float-call" title="Call Us Now">
+      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- SCRIPT FOR WHATSAPP REDIRECT -->
+  <script>
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById('clientName').value;
+      const phone = document.getElementById('clientPhone').value;
+      const fromLoc = document.getElementById('fromLocation').value;
+      const toLoc = document.getElementById('toLocation').value;
+      const goods = document.getElementById('goodsType').value;
+
+      const text = `Hello Samrat Transport Company,\n\nI would like to request a price estimate for my transport requirement.\n\n*Details:*\n- *Name:* ${name}\n- *Phone Number:* ${phone}\n- *From (Pickup):* ${fromLoc}\n- *To (Destination):* ${toLoc}\n- *Goods Category:* ${goods}`;
+
+      const encodedText = encodeURIComponent(text);
+      const whatsappUrl = `https://wa.me/919058584283?text=${encodedText}`;
+
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+
+</body>
+</html>
